@@ -42,7 +42,13 @@ export function Shop(props: ShopProps): Element {
 							Position={new UDim2(0.5, 0, 0.5, 0)}
 						>
 							<uiaspectratioconstraint AspectRatio={1}></uiaspectratioconstraint>
-
+							<Button
+								Size={new UDim2(0.1, 0, 0.1, 0)}
+								AnchorPoint={new Vector2(0.5, 0.5)}
+								Position={new UDim2(1, 0, 0, 0)}
+								Text={"X"}
+								OnActivated={context.close}
+							></Button>
 							<Header title="Shop"></Header>
 							<Navbar
 								Orientation={Enum.FillDirection.Vertical}

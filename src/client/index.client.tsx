@@ -14,6 +14,8 @@ export function App(): Element {
 const target = Players.LocalPlayer.WaitForChild("PlayerGui");
 Roact.mount(<App />, target);
 
-print("Waiting 2 seconds to open shop from a signal observed by the shop component itself");
-task.wait(2);
-openSignal.Fire();
+// eslint-disable-next-line no-constant-condition
+while (true) {
+	task.wait(2);
+	openSignal.Fire();
+}

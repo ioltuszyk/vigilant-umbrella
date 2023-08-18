@@ -15,6 +15,10 @@ export function Main(): Element {
 		dispatch({ type: ActionTypeKeys.OPEN });
 	});
 
+	// NOTE: these could be actions being dispatched to a store
+	// also, the story does not render the entire 'App' but rather just the shop 'Window' component, so this context does not exist in the story
+	// this could easily be alleviated by creating a component that wraps the 'Shop' component, and then the story could render that component instead
+	// though other alternatives could be used as well
 	const storeContext = useMemo(
 		() => ({
 			close: () => dispatch({ type: ActionTypeKeys.CLOSE }),
