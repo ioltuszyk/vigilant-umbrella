@@ -9,10 +9,11 @@ type ButtonProps = PropsWithChildren<Roact.JsxInstance<TextButton>> & {
 };
 
 export function Button(props: ButtonProps) {
-	const onActivated = useCallback(() => {
-		if (props.OnActivated !== undefined) {
-			props.OnActivated();
+	const onActivated = useMemo(() => {
+		if (props.OnActivated === undefined) {
+			return undefined;
 		}
+		return props.OnActivated;
 	}, [props.OnActivated]);
 
 	const [pressed, setPressed] = useState(false);
@@ -67,11 +68,7 @@ export function Button(props: ButtonProps) {
 				MouseButton1Down: () => {
 					setPressed(true);
 				},
-				Activated: () => {
-					if (props.OnActivated !== undefined) {
-						props.OnActivated();
-					}
-				},
+				Activated: onActivated,
 			}}
 		>
 			{props[Roact.Children]}
