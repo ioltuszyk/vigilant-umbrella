@@ -20,9 +20,14 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-roblox-ts": "^0.0.35",
     "prettier": "^3.0.1",
+    "rbxts-transformer-flamework": "1.0.0-beta.23",
+    "roblox-ts": "2.1.1-dev-8e87de6",
     "typescript": "^5.1.6"
   },
   "dependencies": {
+    "@flamework/components": "1.0.0-beta.23",
+    "@flamework/core": "1.0.0-beta.23",
+    "@flamework/networking": "1.0.0-beta.23",
     "@rbxts/flipper": "^2.0.1",
     "@rbxts/object-utils": "^1.0.4",
     "@rbxts/observer": "^0.1.4",
@@ -34,6 +39,7 @@
     "@rbxts/roact-spring": "^2.0.0",
     "@rbxts/services": "^1.5.1",
     "@rbxts/set-timeout": "^1.1.2",
-    "@rbxts/signal": "^1.1.1"
+    "@rbxts/signal": "^1.1.1",
+    "@rbxts/t": "^3.1.0"
   }
 }
